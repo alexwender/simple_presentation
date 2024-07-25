@@ -13,6 +13,40 @@
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.container {
+			display: flex;
+			justify-content: space-between;
+
+			.box {
+				width: 30%;
+				padding: 10px;
+				text-align: center;
+				border: 1px solid #ccc;
+				box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.box p {
+				margin: 0;
+				flex-grow: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			t1 {
+				height: 50px;
+				line-height: 50px;
+				/* Vertically centers the text */
+				text-align: center;
+				/* Horizontally centers the text */
+				margin: 0;
+			}
+	</style>
 </head>
 
 <body>
@@ -24,26 +58,154 @@
 				data-transition="slide">
 			</section>
 
-			<section>HTML Slide 1
+			<section>Clarification
 				<section>
-					<h3> Mermaid Flowchart</h3>
-					<div class="mermaid">
-						<pre>
-						%%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
-						flowchart TD
-							A[Start] --> B{Is it?};
-							B -- Yes --> C[OK];
-							C --> D[Rethink];
-							D --> B;
-							B -- No ----> E[End];
-					</pre>
+					<h2 style="height: 30%; display: flex; justify-content: center; align-items: center;">
+						Identification of Customer</h2>
+					<div class="container">
+						<div class="box fragment">
+							<p>Requirements</p>
+						</div>
+						<div class="box fragment">
+							<p>Knowledge</p>
+						</div>
+						<div class="box fragment">
+							<p>Perspective</p>
+						</div>
 					</div>
 				</section>
 				<section>
-					<h2> Another Slide</h2>
+					<h8>Customer Requirements</h8>
+					<div class="mermaid">
+						<pre>
+							%%{init: {'theme': 'default', 'themeVariables': { 'darkMode': false }}}%%
+							mindmap
+								root((customer requirements))
+									Short-Term Goals
+										Metric of Tool Evaluation
+										Metrics of Tool Usage
+										Timeframe
+										Competition against
+											Internal Tooling
+											External Tooling
+									Long-Term Goals
+										Small Scale Deployment
+										Large Scale Deployment
+										Possibility to use other Products
+									Level Of Interaction
+										Coding with API
+											Language
+												Python
+												C++
+										UI centered workflow
+										Cloud Integration
+						</pre>
+					</div>
+				</section>
+				<section>
+					<h4>Customer Knowledge</h4>
+					<div class="container">
+						<div class="box" style="font-size: large">
+							<h4>Degree of technical background</h4>
+							<ul>
+								<li>Programming Skills</li>
+								<ul>
+									<li>active programming</li>
+									<li>passive programming</li>
+								</ul>
+								<li>Domain Knowledge</li>
+								<ul>
+									<li>depth of technical questions</li>
+									<li>spectrum of domains</li>
+								</ul>
+							</ul>
+
+						</div>
+						<div class="box" style="font-size: large">
+							<h4>Level of Expectation</h4>
+							<ul>
+								<li>How can the customer be impressed?</li>
+								<li>Which trade-offs are acceptable?</li>
+								<li>Is customer aware of State of the Art?</li>
+								<li>How deep should the presented knowledge go?</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h4>Customer Perspective</h4>
+					<div class="container" style="font-size: large">
+						<div class="box">
+							<h6>Role of Customer</h6>
+							<ul>
+								<li>Technical</li>
+								<li>Management</li>
+							</ul>
+
+						</div>
+						<div class="box">
+							<h6>Goal of Customer</h6>
+							<ul>
+								<li>Technical Viability</li>
+								<ul>
+									<li>Coverage of requirements</li>
+									<li>Scalability</li>
+								</ul>
+								<li>Cost effectivness</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 			</section>
-			<section>HTML Slide 2</section>
+			<section>Preparation
+				<section>
+					<h2 style="height: 30%; display: flex; justify-content: center; align-items: center;">
+						Get / Create Material / Workshop</h2>
+					<div class="container">
+						<div class="box fragment">
+							<p>Technical Experts</p>
+						</div>
+						<div class="box fragment">
+							<p>Image / Video Material</p>
+						</div>
+						<div class="box fragment">
+							<p>Coding Examples</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section>Feedback Loop
+				<section>
+					<h2> Iterative Process</h2>
+					<div class="mermaid">
+						<pre>
+						%%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+						flowchart LR
+							Slides[Slideset/Material] --> Internal[Internal Discussion];
+							Internal -- Yes ----> Customer[Customer];
+							Customer -- No ----> Slides;
+							Customer -- Yes ----> Polish;
+							Customer --> Analyse[Analyse Feedback];
+							Analyse --> Slides
+							Internal -- No ----> Slides;
+					</pre>
+					</div>
+					<h5 class="fragment">Analysis of Feedback very important!</h5>
+					<ul class="fragment">
+						<li>Further refine goal / requirements of customer</li>
+						<li>More knowledge about expectations</li>
+						<li>Opportunities for other products</li>
+					</ul>
+				</section>
+			</section>
+			<section>Polish / Rehearsal
+				<section>
+					<p class="fragment">Ensure slide quality</p>
+					<p class="fragment">Ensure consistent "story" in slides</p>
+					<p class="fragment">Rehearse demonstrations</p>
+					<p class="fragment">Test example code</p>
+				</section>
+			</section>
 		</div>
 	</div>
 

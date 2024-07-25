@@ -1,5 +1,10 @@
-## Example Presentation
+## Customer Workshop Preparation
 
 ---
 
-## Test Slide 2
+## Important Steps
+
+* Clarification
+* Preparation
+* Feedback Loop
+* Polish / Rehearsal
